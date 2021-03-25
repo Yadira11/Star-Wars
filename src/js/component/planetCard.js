@@ -18,7 +18,7 @@ export const PlanetCard = props => {
 					<p className="card-text">{props.climate}</p>
 					<p className="card-text">{props.gravity}</p>
 
-					<Link to="singleProper">
+					<Link to={`/vistaplanetcard/${props.position}`}>
 						<p className="btn btn-primary"> Boton</p>
 					</Link>
 					<Link onClick={() => actions.addFavorite(props.title, "planetas")}>
@@ -36,5 +36,6 @@ PlanetCard.propTypes = {
 	title: PropTypes.object,
 	population: PropTypes.object,
 	climate: PropTypes.object,
-	gravity: PropTypes.object
+	gravity: PropTypes.object,
+	position: PropTypes.number
 };

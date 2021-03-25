@@ -25,6 +25,7 @@ export const Home = () => {
 								textEyeC={people.eye_color}
 								textHairC={people.hair_color}
 								textMass={people.mass}
+								position={i}
 							/>
 						</div>
 					);
@@ -41,6 +42,7 @@ export const Home = () => {
 								population={planet.population}
 								climate={planet.climate}
 								gravity={planet.gravity}
+								position={i}
 							/>
 						</div>
 					);

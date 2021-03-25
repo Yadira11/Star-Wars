@@ -19,7 +19,7 @@ export const PersonCard = props => {
 					<p className="card-text">{props.textEyeC}</p>
 					<p className="card-text">{props.textHairC}</p>
 					<p className="card-text">{props.textMass}</p>
-					<Link to="singleProper">
+					<Link to={`/vistapersoncard/${props.position}`}>
 						<p className="btn btn-primary"> boton</p>
 					</Link>
 					<Link onClick={() => actions.addFavorite(props.title, "persona")}>
@@ -37,5 +37,6 @@ PersonCard.propTypes = {
 	textGender: PropTypes.string,
 	textEyeC: PropTypes.string,
 	textHairC: PropTypes.string,
-	textMass: PropTypes.string
+	textMass: PropTypes.string,
+	position: PropTypes.number
 };

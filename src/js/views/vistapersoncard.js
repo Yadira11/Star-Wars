@@ -2,32 +2,35 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 export const Vistapersoncard = props => {
+	const { store, actions } = useContext(Context);
+	const { posicion } = useParams();
 	return (
 		<div className="container">
 			<div className="jumbotron">
 				<h1 className="display-4">
-					<strong>{NombrePersonaje}</strong>
+					<strong>{store.peoples[posicion].name}</strong>
 				</h1>
 				<div className="row">
-					<img src="" alt="Trulli" width="400" />
+					<img
+						src="https://as.com/meristation/imagenes/2019/11/21/noticias/1574336961_955124_1574337025_noticia_normal.jpg"
+						alt="Trulli"
+						width="400"
+					/>
 				</div>
-				<hr className="card-body bg-dark" />
-				<h5 className="card-title text-white">
-					<strong>{nombre}</strong>
-				</h5>
-				<p className="card-text text-white">
-					<strong>Title: &nbsp;</strong>
+				<p className="card-text text-primary">
+					<strong>{store.peoples[posicion].name}</strong>
 					Titulo
 					<br />
 					<strong>Gender</strong>
-					Genero
+					{store.peoples[posicion].gender}
 					<br />
 					<strong>Height: &nbsp;</strong>
-					altura
+					{store.peoples[posicion].height}
 					<br />
 					<strong>Mass: &nbsp;</strong>
-					Masa
+					{store.peoples[posicion].mass}
 				</p>
+				<hr className="card-body bg-dark" />
 			</div>
 		</div>
 	);

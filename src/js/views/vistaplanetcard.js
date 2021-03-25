@@ -2,38 +2,38 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 export const Vistaplanetcard = props => {
+	const { store, actions } = useContext(Context);
+	const { posicion } = useParams();
 	return (
 		<div className="container">
 			<div className="jumbotron">
 				<h1 className="display-4">
-					<strong>{NombrePlanetas}</strong>
+					<strong>{store.planets[posicion].name}</strong>
 				</h1>
 				<div className="row">
-					<img src="" alt="Trulli" width="400" />
+					<img
+						src="https://p4.wallpaperbetter.com/wallpaper/35/205/74/planet-venus-planets-venus-space-planets-hd-art-wallpaper-preview.jpg"
+						alt="Trulli"
+						width="400"
+					/>
 				</div>
-				<hr className="card-body bg-dark" />
-				<h5 className="card-title text-white">
-					<strong>{nombre}</strong>
-				</h5>
-				<p className="card-text text-white">
+				<p className="card-text text-primary">
+					<strong>{store.planets[posicion].name}</strong>
+					<br />
 					<strong>title: &nbsp;</strong>
-					title
+					{store.planets[posicion].titulo}
 					<br />
 					<strong>population</strong>
-					population
+					{store.planets[posicion].population}
 					<br />
 					<strong>climate: &nbsp;</strong>
-					climate
+					{store.planets[posicion].climate}
 					<br />
 					<strong>gravity: &nbsp;</strong>
-					gravity
+					{store.planets[posicion].gravity}
 				</p>
+				<hr className="card-body bg-dark" />
 			</div>
 		</div>
 	);
 };
-
-
-
-
-
