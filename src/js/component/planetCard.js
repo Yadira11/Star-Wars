@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const PlanetCard = props => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="col-md-3" style={{ width: "18rem", float: "left" }}>
+		<div className="col-md-10" style={{ width: "22rem", float: "left" }}>
 			<div className="card mb-2">
 				<img
 					src="https://image.freepik.com/vector-gratis/planeta-tierra-neon_73458-795.jpg"

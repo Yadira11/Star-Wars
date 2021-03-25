@@ -13,8 +13,8 @@ export const Home = () => {
 	console.log(store.peoples);
 	return (
 		<div>
-			<div className="container">
-				<h1 className="text-danger">Personajes</h1>
+			<h1 className="text-danger">Personajes</h1>
+			<div className="row flex-row flex-nowrap overflow-auto">
 				<br />
 				{store.peoples.map((people, i) => {
 					return (
@@ -30,8 +30,8 @@ export const Home = () => {
 					);
 				})}
 			</div>
-			<div className="container">
-				<h1 className="text-danger">Planetas</h1>
+			<h1 className="text-danger">Planetas</h1>
+			<div className="row flex-row flex-nowrap overflow-auto">
 				<br />
 				{store.planets.map((planet, i) => {
 					return (

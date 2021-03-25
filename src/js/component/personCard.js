@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const PersonCard = props => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="col-md-3" style={{ width: "16rem", float: "left" }}>
+		<div className="col-md-10" style={{ width: "24rem", float: "left" }}>
 			<div className="card mb-2">
 				<img
 					src="https://images.unsplash.com/photo-1586136194012-35ceaddbd773?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
